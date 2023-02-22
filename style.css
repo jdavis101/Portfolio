@@ -6,18 +6,18 @@
 }
 
 body{
-    background: #000814;
-    color: #fff;
+    background: #432818;
+    color: #FFE6A7;
 }
 
-#header{
+/* #header{
     width: 100%;
     height: 100vh;
     background-image: url(images/black.jpg);
 
     background-size: cover;
     background-position: center;
-}
+} */
 
 .container{
     padding: 10px 10%;
@@ -31,7 +31,7 @@ nav{
 }
 
 .logo{
-    width: 240px;
+    width: 300px;
 }
 
 nav ul li{
@@ -41,7 +41,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #edf2f4;
+    color: #FFE6A7;
     text-decoration: none;
     font-size: 18px;
 }
