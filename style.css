@@ -6,22 +6,37 @@
 }
 
 body{
-    background: #000;
+    background: #212529;
     color: #fff;
 }
+
+
+/* .strokeme {
+    color: black;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  } */
 
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(images/bakground.png);
-
+    background-image: url(images/nightraleigh.png);
     background-size: cover;
     background-position: center;
 }
 
-.container{
-    padding: 10px 10%;
+#bkg{
+    /* background for text */
+    background-color: rgba( 0,0,0, 0.6);
+    width: 53%;
+    padding: 10px;
+    border-radius: 15px;
 }
+
+.container{
+    padding: 100px 10%;
+}
+
+
 
 nav{
     display: flex;
@@ -35,7 +50,7 @@ nav{
 }
 
 .selfie{
-    width: 200px;
+    width: 100px;
 }
 
 nav ul li{
@@ -54,7 +69,7 @@ nav ul li a::after {
     content: "";
     /**/
     display: block;
-    background-color: #fff;
+    background-color: #ef476f;
     height: 3px;
     width: 0;
     bottom: 0px;
@@ -67,7 +82,7 @@ nav ul li a:hover::after {
 }
 
 .header-text{
-    margin-top: 15%;
+    margin-top: 18%;
     font-size: 30px;
 }
 
@@ -78,11 +93,11 @@ nav ul li a:hover::after {
 
 /* Name color */
 .header-text h1 span{
-    color: #fff;
+    color: #ef476f;
 }
 /* About */
 #about{
-    margin-top: 100px 0;
+    margin-top: 20px 0;
     color: #fff ;
 }
 
@@ -108,4 +123,50 @@ nav ul li a:hover::after {
     font-size: 60px;
     font-weight: 600;
     color: #fff;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ef476f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0 ;
+}
+
+.tab-contents ul li span{
+    color: #ef476f;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents.active-tab{
+    display: block;
 }
