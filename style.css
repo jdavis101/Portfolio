@@ -305,3 +305,50 @@ form .btn2{
 
 /* Responsive Website CSS */
 
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(images/phone.png ) ;
+    }
+
+    .header-text{
+        margin-top: 40%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    #bkg{
+        background-color: rgba( 0,0,0, 0.8);
+        width: 100%;
+        padding: 8px;
+        border-radius: 15px;
+    }
+
+
+}
+/* iPad Config*/
+@media only screen and (min-width: 800px) and (max-width: 815px){
+    #header{
+        background-image: url(images/phone.png ) ;
+    }
+
+    .header-text{
+        margin-top: 40%;
+        font-size: 16px;
+    }
+
+    .header-text h1{
+        font-size: 30px;
+    }
+
+    #bkg{
+        background-color: rgba( 0,0,0, 0.8);
+        width: 53%;
+        padding: 8px;
+        border-radius: 15px;
+    }
+
+
+}
