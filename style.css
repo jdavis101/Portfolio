@@ -27,7 +27,7 @@ body{
 #bkg{
     /* background for text */
     background-color: rgba( 0,0,0, 0.6);
-    width: 53%;
+    width: 55%;
     padding: 10px;
     border-radius: 15px;
 }
