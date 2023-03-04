@@ -13,15 +13,17 @@
             <div class="container">
                 <nav>
                     <img src="images/jay.png" alt="logo" class = "logo">
-                    <ul>
+                    <ul id="sidemenu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Portfolio</a></li>
                         <li><a href="#">Contact</a></li>
                         <li><a href="#">Download Resume</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
-                <div class="header-text strokeme">
+                <div class="header-text stokes">
                     <div id="bkg">
                         <p class="text">Software Engineer</p>
                         <h1 class="text">Hi, I'm <span>Jaylen</span><br>from North Carolina</h1>
@@ -166,6 +168,20 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+
+</script>
+
+<script>
+
+    var sidemu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemu.style.right = "-200px";
+    }
 
 </script>
 

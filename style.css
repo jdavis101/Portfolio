@@ -11,7 +11,7 @@ body{
 }
 
 
-/* .strokeme {
+/* .stokes {
     color: black;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   } */
@@ -303,6 +303,11 @@ form .btn2{
     cursor: pointer;
 }
 
+nav .fa-solid{
+    display: none;
+}
+
+
 /* Responsive Website CSS */
 
 @media only screen and (max-width: 600px){
@@ -326,10 +331,40 @@ form .btn2{
         border-radius: 15px;
     }
 
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #8e94f2;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
 
 }
 /* iPad Config*/
 @media only screen and (min-width: 800px) and (max-width: 815px){
+
     #header{
         background-image: url(images/phone.png ) ;
     }
