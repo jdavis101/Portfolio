@@ -7,7 +7,6 @@ Download Visual Studio Code
 
 Step Two:
 Open the Folder "Portfolio" in VS Code
-
 Stop Three:
 Click "Run"
 
