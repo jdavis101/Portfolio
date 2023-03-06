@@ -1,4 +1,3 @@
-# Portfolio
 <h1>Visiting the Website publicly</h1>
 (Link in progress)
 <h1>Running the Website locally</h1>
