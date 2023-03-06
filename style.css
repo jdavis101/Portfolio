@@ -312,6 +312,12 @@ nav .fa-solid{
     display: none;
 }
 
+#msg{
+    color: #8e94f2;
+    margin-top: -40px;
+    display: block;
+}
+
 
 /* Responsive Website CSS */
 
