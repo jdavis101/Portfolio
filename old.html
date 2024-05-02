@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/3614e86d32.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header"> 
+            <div class="container">
+                <nav>
+                    <img src="images/jay.png" alt="logo" class = "logo">
+                    <ul id="sidemenu">
+                        <li onclick="closemenu()"><a href="#header">Home</a></li>
+                        <li onclick="closemenu()"><a href="#about">About</a></li>
+                        <!-- <li onclick="closemenu()"><a href="#services">Services</a></li> -->
+                        <li onclick="closemenu()"><a href="#contact">Contact</a></li>
+                        <!-- <li><a href="#">Download Resume</a></li> -->
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text stokes">
+                    <div id="bkg">
+                        <p class="text">Software Engineer</p>
+                        <h1 class="text">Hi, I'm <span>Jaylen</span><br>from North Carolina</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!------------- About ------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/photo.JPG" width="300">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p> Hi, I'm Jaylen, and I'm passionate about skateboarding, snowboarding, video games, and 
+                    cars. I've been skateboarding since I was 7 which lead me to my growing
+                    love for snowboarding. I grew up playing video games with my younger brothers, so catching 
+                    up with them while playing some Madden is how we stay connected even today.
+                    I love watching and playing sports as I played Soccer, Baseball, and Bowled competitively
+                    growing up. I also love Cars and I spend a lot of my own time working on my car, whether it's routine
+                    maintenance or upgrades I love it all. 
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <!-- <li><span>UI?UX</span><br>Designing Web/App Interfaces</li> -->
+                            <li><span>Web Development</span><br>Designing Web Interfaces</li>
+                            <li><span>App Development</span><br>Building iOS and Android apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-2023</span><br>Lead Technical Support Specialist at Allied Universal</li>
+                            <li><span>2022-2022</span><br>Technical Support Specialist at Allied Universal</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018-2022</span><br>B.S. Computer Science from <br> University of North
+                            Carolina at Charlotte</li>
+                        </ul>
+                    </div>
+                </p>
+            </div>
+        </div>
+</div>
+<!----contact------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> DavisProduction18@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> (984) 209-2664</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/jxchillin/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/jdavis400/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/JxChillin"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/jcd.pdf" class="btn btn2">Download Cv</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>  
+        </div>
+    </div>
+    <div class="copyright"></div>
+</div>
+
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+</script>
+
+<script>
+
+    var sidemu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzl0UicjdaIpkF5VY-XUQlzR_9LqUpSvvP5xmBdpq_OCVo1luakZt0wUI7QAXSg5QIOXg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+</html>
